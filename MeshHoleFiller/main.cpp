@@ -11,14 +11,15 @@ int main(int argc,char* argv[])
     using Triangle_mesh = OpenMesh::TriMesh_ArrayKernelT<>;
   	Triangle_mesh mesh;
 		// OpenMesh::IO::read_mesh(mesh, "D:/data/holeMesh/coutRepair.stl");
-		OpenMesh::IO::read_mesh(mesh, "/home/taoran/HoleFill/MeshHoleFiller/test/bunnyhole.off");
+		// OpenMesh::IO::read_mesh(mesh, "/home/taoran/HoleFill/MeshHoleFiller/test/bunnyhole.off");
+		OpenMesh::IO::read_mesh(mesh, "/home/taoran/HoleFill/MeshHoleFiller/test/hemisphere.off");
 		HoleFiller::SmoothMeshBoundary(mesh);
 		for (auto hh : mesh.halfedges()) {
 			if (mesh.is_boundary(hh)) {
-				HoleFiller::hole_fillC0(mesh, hh, FixType::idMinAreaMaxDiheral);
+				HoleFiller::hole_fillC2(mesh, hh, FixType::idMinAreaMaxDiheral);
 			}
 		}
-		OpenMesh::IO::write_mesh(mesh, "/home/taoran/HoleFill/MeshHoleFiller/test/bunnyhole_c0_idminareamaxdiheral_out.off");
+		OpenMesh::IO::write_mesh(mesh, "/home/taoran/HoleFill/MeshHoleFiller/test/hemisphere_c2_idminareamaxdiheral_out.off");
   return 0;
 }
 

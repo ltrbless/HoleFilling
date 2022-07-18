@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/taoran/HoleFill/MeshHoleFiller/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7  -I/home/taoran/HoleFill/MeshHoleFiller/./eigen -I/home/taoran/HoleFill/MeshHoleFiller/openmesh/include -std=c++11  -g -o CMakeFiles/main.dir/main.cpp.o -c /home/taoran/HoleFill/MeshHoleFiller/main.cpp",
+  "file": "/home/taoran/HoleFill/MeshHoleFiller/main.cpp"
+},
+{
+  "directory": "/home/taoran/HoleFill/MeshHoleFiller/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7  -I/home/taoran/HoleFill/MeshHoleFiller/./eigen -I/home/taoran/HoleFill/MeshHoleFiller/openmesh/include -std=c++11  -g -o CMakeFiles/main.dir/HoleFiller.cpp.o -c /home/taoran/HoleFill/MeshHoleFiller/HoleFiller.cpp",
+  "file": "/home/taoran/HoleFill/MeshHoleFiller/HoleFiller.cpp"
+}
+]

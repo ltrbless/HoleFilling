@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/HoleFiller.cpp.o"
-  "main.pdb"
+  "CMakeFiles/main.dir/HoleFiller.cpp.o.d"
+  "CMakeFiles/main.dir/main.cpp.o"
+  "CMakeFiles/main.dir/main.cpp.o.d"
   "main"
+  "main.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

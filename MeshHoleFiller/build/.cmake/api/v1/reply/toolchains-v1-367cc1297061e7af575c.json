@@ -1,0 +1,119 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/usr/lib/gcc/x86_64-linux-gnu/7/include",
+						"/usr/local/include",
+						"/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed",
+						"/usr/include/x86_64-linux-gnu",
+						"/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/home/taoran/intel/oneapi/mpi/2021.3.0/libfabric/lib",
+						"/home/taoran/intel/oneapi/mpi/2021.3.0/lib",
+						"/home/taoran/intel/oneapi/compiler/2021.3.0/linux/lib",
+						"/usr/lib/gcc/x86_64-linux-gnu/7",
+						"/usr/lib/x86_64-linux-gnu",
+						"/usr/lib",
+						"/lib/x86_64-linux-gnu",
+						"/lib",
+						"/home/taoran/intel/oneapi/mpi/2021.3.0/lib/release",
+						"/home/taoran/intel/oneapi/compiler/2021.3.0/linux/compiler/lib/intel64_lin"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"gcc",
+						"gcc_s",
+						"c",
+						"gcc",
+						"gcc_s"
+					]
+				},
+				"path" : "/usr/bin/x86_64-linux-gnu-gcc-7",
+				"version" : "7.5.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/usr/include/c++/7",
+						"/usr/include/x86_64-linux-gnu/c++/7",
+						"/usr/include/c++/7/backward",
+						"/usr/lib/gcc/x86_64-linux-gnu/7/include",
+						"/usr/local/include",
+						"/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed",
+						"/usr/include/x86_64-linux-gnu",
+						"/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/home/taoran/intel/oneapi/mpi/2021.3.0/libfabric/lib",
+						"/home/taoran/intel/oneapi/mpi/2021.3.0/lib",
+						"/home/taoran/intel/oneapi/compiler/2021.3.0/linux/lib",
+						"/usr/lib/gcc/x86_64-linux-gnu/7",
+						"/usr/lib/x86_64-linux-gnu",
+						"/usr/lib",
+						"/lib/x86_64-linux-gnu",
+						"/lib",
+						"/home/taoran/intel/oneapi/mpi/2021.3.0/lib/release",
+						"/home/taoran/intel/oneapi/compiler/2021.3.0/linux/compiler/lib/intel64_lin"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"m",
+						"gcc_s",
+						"gcc",
+						"c",
+						"gcc_s",
+						"gcc"
+					]
+				},
+				"path" : "/usr/bin/x86_64-linux-gnu-g++-7",
+				"version" : "7.5.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

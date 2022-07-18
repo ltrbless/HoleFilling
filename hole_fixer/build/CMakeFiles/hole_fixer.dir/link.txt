@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/hole_fixer.dir/main.cpp.o  -o hole_fixer -pthread 
+/usr/bin/c++ -rdynamic CMakeFiles/hole_fixer.dir/main.cpp.o -o hole_fixer  -pthread 

@@ -244,33 +244,33 @@ int main(int argc, char *argv[])
 			fairedF(findex, 2) = r[2];
 		}
 
-		// VectorXi b(fairedV.rows() - patchV.rows());
-		// MatrixXd bc(fairedV.rows() - patchV.rows(), 3);
-		// // setup the boundary conditions. This is simply the vertex positions of the vertices not part of the patch.
-		// for (int i = (int)patchV.rows(); i < (int)fairedV.rows(); ++i) {
-		// 	int jj = i - (int)patchV.rows();
+		VectorXi b(fairedV.rows() - patchV.rows());
+		MatrixXd bc(fairedV.rows() - patchV.rows(), 3);
+		// setup the boundary conditions. This is simply the vertex positions of the vertices not part of the patch.
+		for (int i = (int)patchV.rows(); i < (int)fairedV.rows(); ++i) {
+			int jj = i - (int)patchV.rows();
 
-		// 	b(jj) = i;
+			b(jj) = i;
 
-		// 	bc(jj, 0) = fairedV(i, 0);
-		// 	bc(jj, 1) = fairedV(i, 1);
-		// 	bc(jj, 2) = fairedV(i, 2);
-		// }
+			bc(jj, 0) = fairedV(i, 0);
+			bc(jj, 1) = fairedV(i, 1);
+			bc(jj, 2) = fairedV(i, 2);
+		}
 
-		// MatrixXd Z;
-		// int k = 2;
-		// // surface fairing simply means that we solve the equation
-		// // Delta^2 f = 0
-		// // with appropriate boundary conditions.
-		// // this function igl::harmonic from libigl takes care of that.
+		MatrixXd Z;
+		int k = 2;
+		// surface fairing simply means that we solve the equation
+		// Delta^2 f = 0
+		// with appropriate boundary conditions.
+		// this function igl::harmonic from libigl takes care of that.
 
-		// // note that this is pretty inefficient thought.
-		// // the only boundary conditions necessary are the 2-ring of vertices around the patch.
-		// // the rest of the mesh vertices need not be specified.
-		// // we specify the rest of the mesh for simplicity of code, but it is not strictly necessary,
-		// // and pretty inefficient, since we have to solve a LARGE matrix equation as a result of this.
-		// igl::harmonic(fairedV, fairedF, b, bc, k, Z);
-		// fairedV = Z;
+		// note that this is pretty inefficient thought.
+		// the only boundary conditions necessary are the 2-ring of vertices around the patch.
+		// the rest of the mesh vertices need not be specified.
+		// we specify the rest of the mesh for simplicity of code, but it is not strictly necessary,
+		// and pretty inefficient, since we have to solve a LARGE matrix equation as a result of this.
+		igl::harmonic(fairedV, fairedF, b, bc, k, Z);
+		fairedV = Z;
 	}
 
 	// // finally, we do a decimation step.
